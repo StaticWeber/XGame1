@@ -1,0 +1,147 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #000;
+    color: #fff;
+}
+
+#logo{
+    text-align: center;
+    color: yellow;
+}
+
+.nav-bar{
+  place-items: center;
+  background-color: purple;
+  
+}
+
+.nav-bar ul{
+    list-style: none;
+}
+
+.nav-bar ul a{
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #fff;
+    
+}
+
+.nav-bar ul a:hover{
+   background-color: yellow;
+   color: #000;
+}
+
+.nav-bar ul a:active{
+   background-color: yellow;
+   color: #000;
+}
+
+#game-start{
+    position: absolute;
+    top: 15rem;
+    left: 25rem;
+}
+
+
+#game-title{
+    letter-spacing: 20px;
+}
+
+#first-span{
+    color: lime;
+}
+
+#second-span{
+    color: red;
+}
+
+#loading{
+    color: lime;
+}
+
+
+#game-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;;
+    align-items: center;
+}
+
+.movie-title{
+    color: red;
+    padding-top: 10px;
+}
+
+.videos{
+   position: absolute;
+   top: 1em;
+}
+
+.buttons{
+  position: relative;
+  top: 30em;
+  float: left;
+}
+
+
+#startbutton{
+    background-color: lime;
+    margin-right: 10em;
+    color: #000;
+    border: none;
+    border-radius: 10px;
+    padding: 7px 7px;
+
+}
+
+#doggybutton{
+    background-color: purple;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 7px 7px;
+    position: relative;
+    bottom: 0.0em;
+
+}
+
+
+#startbutton:active{
+    background-color: red;
+    transition: 1.5s ease-out;
+    transform: scale(2.0);
+}
+
+
+#doggybutton:active{
+    background-color: red;
+    transition: 1.5s ease-out;
+    transform: scale(2.0);
+}
+
+
+#warning{
+    color: red;
+    margin-top: 2em;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+
+#wait{
+    color: orange;
+    margin-left: 13em;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+
+#risk{
+    color: red;
+    margin-left: 10em;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}

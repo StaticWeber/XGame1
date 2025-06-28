@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+    <link rel="stylesheet" href="/game.css">
+    <!-- <link rel="stylesheet" href="/videojs/video-js.css"> -->
+</head>
+<body>
+<header id="header">
+ <h1 id="logo">RECOMENDA</h1>
+
+ <nav class="nav-bar">
+
+    <ul>
+      <a href="restricted.html"><li>Restricted</li></a>
+      <a href="" id="logout"><li>Logout</li></a>
+    </ul>
+
+ </nav>
+
+</header>
+
+
+<main>
+
+   <div id="game-start">
+    <h2 id="game-title"><span id="first-span">ASS</span> <span id="second-span">BANGER!!!</span><span id="third-span">😱😱</span></h2>
+    <h3 id="loading">Loading game...</h3>
+    <p id="warning">Warning!!! <br> This game is strictly prohibited for individuals under the age of 18.<br>Failure to comply to this warning is at inividual risk.</p>
+    <p id="wait">Please wait...</p>
+    <p id="risk">Viewer discretion is advised!!</p>
+   </div>
+
+  <div id="game-container">
+   
+     <video width="600" height="600" id="video1" class="videos" preload="auto" loop>
+        <source src="/gamevideos/doggy-screen.mp4" type="video/mp4" id="videoSource1"/>
+    </video>
+
+     <video width="600" height="600" id="video2" class="videos" preload="auto" loop>
+        <source src="/gamevideos/hot-screen.mp4" type="video/mp4" id="videoSource1"/>
+    </video>
+
+
+    <div id="button-container">
+
+      <button class="buttons" id="startbutton">Start</button>
+    <button class="buttons" id="doggybutton">Doggy</button>
+  
+    </div>
+    
+</div>
+
+</main>
+
+<script src="/game.js">
+  
+</script>
+    
+</body>
+</html>
+
+
