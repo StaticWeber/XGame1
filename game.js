@@ -54,7 +54,7 @@ function Game(){
    loading.style.display = 'block'
 }, 30000);
 
-    setTimeout(() => {
+   setTimeout(() => {
    warning.style.display = 'block'
 }, 35000);
 
@@ -71,7 +71,7 @@ function Game(){
 setTimeout(() => {
     window.alert('game over');
     gamecontainer.style.display = 'none';
-    window.location.href = '/restricted'
+    window.location.href = 'game.html'
 }, 200000)
 
 
@@ -96,7 +96,7 @@ startbutton.addEventListener('click', () => {
   setTimeout(() => {
   doggybutton.disabled = false;
   doggybutton.style.backgroundColor = 'purple';
-}, 20000)
+}, 5000)
  
 });
 
