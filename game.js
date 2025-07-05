@@ -1,9 +1,17 @@
 const gamecontainer = document.getElementById('game-container');
+const logo = document.getElementById('logo')
+const navBar = document.getElementsByClassName('nav-bar')
 const video1 = document.getElementById('video1');
 const video2 = document.getElementById('video2');
+const video3 = document.getElementById('video3');
+const video4 = document.getElementById('video4');
+const video5 = document.getElementById('video5');
 const logout = document.getElementById('logout');
 const videoSource1 = document.getElementById('videoSource1');
-const doggybutton = document.getElementById('doggybutton');
+const style1Button = document.getElementById('style1-button');
+const style2Button = document.getElementById('style2-button');
+const style3Button = document.getElementById('style3-button');
+const style4Button = document.getElementById('style4-button');
 const startbutton = document.getElementById('startbutton');
 const buttonContainer = document.getElementById('button-container');
 const gameStart = document.getElementById('game-start');
@@ -17,6 +25,12 @@ const warning = document.getElementById('warning');
 const refreshtoken = localStorage.getItem('token');
 
 gamecontainer.style.display = 'none';
+logo.style.display = 'none';
+navBar[0].style.display = 'none';
+video2.style.display = 'none';
+video3.style.display = 'none';
+video4.style.display = 'none';
+video5.style.display = 'none';
 waitMsg.style.display = 'none';
 riskMsg.style.display = 'none';
 firstSpan.style.display = 'none';
@@ -28,44 +42,10 @@ warning.style.display = 'none';
 
 function Game(){
 
-    setTimeout(() => {
-        waitMsg.style.display = 'block';
-    }, 4000);
-    
-    setTimeout(() => {
-        waitMsg.style.display = 'none';
-        riskMsg.style.display = 'block';
-    }, 10000);
-
-    setTimeout(() => {
-   riskMsg.style.display = 'none';
-   firstSpan.style.display = 'inline-block'
-}, 15000)
-
-    setTimeout(() => {
-   secondSpan.style.display = 'inline-block'
-}, 20000)
-
-    setTimeout(() => {
-   thirdSpan.style.display = 'inline-block'
-}, 25000)
-
-    setTimeout(() => {
-   loading.style.display = 'block'
-}, 30000);
-
-   setTimeout(() => {
-   warning.style.display = 'block'
-}, 35000);
-
-   setTimeout(() => {
-   gameStart.style.display = 'none'
-}, 40000);
 
    setTimeout(() => {
    gamecontainer.style.display = 'flex';
-   video2.style.display = 'none';
-}, 45000);
+}, 4000);
 
 
 setTimeout(() => {
@@ -80,48 +60,295 @@ setTimeout(() => {
 Game();
 
 
-doggybutton.disabled = true;
-doggybutton.style.backgroundColor = 'grey';
+style1Button.disabled = true;
+style2Button.disabled = true;
+style3Button.disabled = true;
+style4Button.disabled = true;
+style1Button.style.backgroundColor = 'grey';
+style2Button.style.backgroundColor = 'grey';
+style3Button.style.backgroundColor = 'grey';
+style4Button.style.backgroundColor = 'grey';
 
 
 
 startbutton.addEventListener('click', () => {
      video1.play();
      video2.pause();
+     video3.pause();
+     video4.pause();
+     video5.pause();
  //  video1.muted = false;
  //  video2.muted = true;
   startbutton.disabled = true;
-  startbutton.style.backgroundColor = 'grey'
+  startbutton.style.display = 'none';
+  startbutton.style.backgroundColor = 'grey';
+  style1Button.style.display = 'none';
+  style2Button.style.display = 'none';
+  style3Button.style.display = 'none';
+  style4Button.style.display = 'none';
 
   setTimeout(() => {
-  doggybutton.disabled = false;
-  doggybutton.style.backgroundColor = 'purple';
-}, 5000)
+  style1Button.disabled = false;
+  style2Button.disabled = false;
+  style3Button.disabled = false;
+  style4Button.disabled = false;
+  style1Button.style.backgroundColor = 'purple';
+  style2Button.style.backgroundColor = 'green';
+  style3Button.style.backgroundColor = 'red';
+  style4Button.style.backgroundColor = 'blue';
+  style1Button.style.display = 'block';
+  style2Button.style.display = 'block';
+  style3Button.style.display = 'block';
+  style4Button.style.display = 'block';
+}, 3000)
  
 });
 
 
-doggybutton.addEventListener('click', () => {
+style1Button.addEventListener('click', () => {
     video1.style.display = 'none';
     video2.style.display = 'flex';
+    video3.style.display = 'none';
+    video4.style.display = 'none';
+    video5.style.display = 'none';
+    video5.pause();
+    video4.pause();
+    video3.pause();
     video2.play();
     video1.pause();
+
  // video2.muted = false;
  // video1.muted = true;
-    doggybutton.disabled = true;
-    doggybutton.style.backgroundColor = 'grey';
+    style1Button.disabled = true;
+    style2Button.disabled = true;
+    style3Button.disabled = true;
+    style4Button.disabled = true;
+    style1Button.style.backgroundColor = 'grey';
+    style2Button.style.backgroundColor = 'grey';
+    style3Button.style.backgroundColor = 'grey';
+    style4Button.style.backgroundColor = 'grey';
+    style1Button.style.display = 'none'
+    style2Button.style.display = 'none'
+    style3Button.style.display = 'none'
+    style4Button.style.display = 'none'
 
     setTimeout(() => {
-    doggybutton.disabled = false;
-    doggybutton.style.backgroundColor = 'purple';
+    style1Button.disabled = false;
+    style2Button.disabled = false;
+    style3Button.disabled = false;
+    style4Button.disabled = false;
+    style1Button.style.backgroundColor = 'purple';
+    style2Button.style.backgroundColor = 'green';
+    style3Button.style.backgroundColor = 'red';
+    style4Button.style.backgroundColor = 'blue';
+    style1Button.style.display = 'block';
+    style2Button.style.display = 'block';
+    style3Button.style.display = 'block';
+    style4Button.style.display = 'block';
+    video5.style.display = 'none';
+    video4.style.display = 'none';
+    video3.style.display = 'none';
     video2.style.display = 'none';
     video1.style.display = 'flex';
     video1.play();
     video2.pause();
+    video3.pause();
+    video4.pause();
+    video5.pause();
+
  // video1.muted = false;
  // video2.muted = true;
 
-}, 7000);
+}, 5000);
+
+  
+});
+
+
+style2Button.addEventListener('click', () => {
+    video1.style.display = 'none';
+    video2.style.display = 'none';
+    video3.style.display = 'flex'
+    video4.style.display = 'none';
+    video5.style.display = 'none';
+    video5.pause();
+    video4.pause();
+    video3.play();
+    video2.pause();
+    video1.pause();
+   
+
+ // video2.muted = false;
+ // video1.muted = true;
+
+    style1Button.disabled = true;
+    style2Button.disabled = true;
+    style3Button.disabled = true;
+    style4Button.disabled = true;
+    style1Button.style.backgroundColor = 'grey';
+    style2Button.style.backgroundColor = 'grey';
+    style3Button.style.backgroundColor = 'grey';
+    style4Button.style.backgroundColor = 'grey';
+    style1Button.style.display = 'none';
+    style2Button.style.display = 'none';
+    style3Button.style.display = 'none';
+    style4Button.style.display = 'none';
+
+    setTimeout(() => {
+    style1Button.disabled = false;
+    style2Button.disabled = false;
+    style3Button.disabled = false;
+    style4Button.disabled = false;
+    style1Button.style.backgroundColor = 'purple';
+    style2Button.style.backgroundColor = 'green';
+    style3Button.style.backgroundColor = 'red';
+    style4Button.style.backgroundColor = 'blue';
+    style1Button.style.display = 'block';
+    style2Button.style.display = 'block';
+    style3Button.style.display = 'block';
+    style4Button.style.display = 'block';
+    video5.style.display = 'none';
+    video4.style.display = 'none';
+    video3.style.display = 'none';
+    video2.style.display = 'none';
+    video1.style.display = 'flex';
+    video1.play();
+    video2.pause();
+    video3.pause();
+    video4.pause();
+    video5.pause();
+
+ // video1.muted = false;
+ // video2.muted = true;
+
+}, 5000);
+
+  
+});
+
+
+
+style3Button.addEventListener('click', () => {
+    video1.style.display = 'none';
+    video2.style.display = 'none';
+    video3.style.display = 'none'
+    video4.style.display = 'flex';
+    video5.style.display = 'none';
+    video5.pause();
+    video4.play();
+    video3.pause();
+    video2.pause();
+    video1.pause();
+   
+
+ // video2.muted = false;
+ // video1.muted = true;
+
+    style1Button.disabled = true;
+    style2Button.disabled = true;
+    style3Button.disabled = true;
+    style4Button.disabled = true;
+    style1Button.style.backgroundColor = 'grey';
+    style2Button.style.backgroundColor = 'grey';
+    style3Button.style.backgroundColor = 'grey';
+    style4Button.style.backgroundColor = 'grey';
+    style1Button.style.display = 'none';
+    style2Button.style.display = 'none';
+    style3Button.style.display = 'none';
+    style4Button.style.display = 'none';
+
+    setTimeout(() => {
+    style1Button.disabled = false;
+    style2Button.disabled = false;
+    style3Button.disabled = false;
+    style4Button.disabled = false;
+    style1Button.style.backgroundColor = 'purple';
+    style2Button.style.backgroundColor = 'green';
+    style3Button.style.backgroundColor = 'red';
+    style4Button.style.backgroundColor = 'blue';
+    style1Button.style.display = 'block';
+    style2Button.style.display = 'block';
+    style3Button.style.display = 'block';
+    style4Button.style.display = 'block';
+    video5.style.display = 'none';
+    video4.style.display = 'none';
+    video3.style.display = 'none';
+    video2.style.display = 'none';
+    video1.style.display = 'flex';
+    video1.play();
+    video2.pause();
+    video3.pause();
+    video4.pause();
+    video5.pause();
+
+ // video1.muted = false;
+ // video2.muted = true;
+
+}, 6400);
+
+  
+});
+
+
+
+
+style4Button.addEventListener('click', () => {
+    video1.style.display = 'none';
+    video2.style.display = 'none';
+    video3.style.display = 'none'
+    video4.style.display = 'none';
+    video5.style.display = 'flex';
+    video5.play();
+    video4.pause();
+    video3.pause();
+    video2.pause();
+    video1.pause();
+   
+
+ // video2.muted = false;
+ // video1.muted = true;
+
+    style1Button.disabled = true;
+    style2Button.disabled = true;
+    style3Button.disabled = true;
+    style4Button.disabled = true;
+    style1Button.style.backgroundColor = 'grey';
+    style2Button.style.backgroundColor = 'grey';
+    style3Button.style.backgroundColor = 'grey';
+    style4Button.style.backgroundColor = 'grey';
+    style1Button.style.display = 'none';
+    style2Button.style.display = 'none';
+    style3Button.style.display = 'none';
+    style4Button.style.display = 'none';
+
+    setTimeout(() => {
+    style1Button.disabled = false;
+    style2Button.disabled = false;
+    style3Button.disabled = false;
+    style4Button.disabled = false;
+    style1Button.style.backgroundColor = 'purple';
+    style2Button.style.backgroundColor = 'green';
+    style3Button.style.backgroundColor = 'red';
+    style4Button.style.backgroundColor = 'blue';
+    style1Button.style.display = 'block';
+    style2Button.style.display = 'block';
+    style3Button.style.display = 'block';
+    style4Button.style.display = 'block';
+    video5.style.display = 'none';
+    video4.style.display = 'none';
+    video3.style.display = 'none';
+    video2.style.display = 'none';
+    video1.style.display = 'flex';
+    video1.play();
+    video2.pause();
+    video3.pause();
+    video4.pause();
+    video5.pause();
+
+ // video1.muted = false;
+ // video2.muted = true;
+
+}, 5000);
 
   
 });
@@ -146,320 +373,7 @@ async function Wassup(){
 
  Wassup()
 
-
-
-// function Verify(){
-
-// const accesstoken = localStorage.getItem('user');
-// const refreshtoken = localStorage.getItem('token');
-
-//   if(!accesstoken && !refreshtoken){
-
-//     window.alert('Unauthorized user');
-//     window.location.href = 'login.html'
-
-// } else if(!refreshtoken){
-//      window.alert('token expired');
-//     window.location.href = 'login.html'
-// }
-
-// }
-
-// Verify();
-
-
-// async function refresh(){
-
-//     try{
-
-// //   const refreshtoken = localStorage.getItem('token');
-//     localStorage.setItem('token',  refreshtoken);
-//     console.log('refresh success')
-   
-//     } catch(error){
-//         console.error(error)
-//     }
-// }
-
-// buttonContainer.addEventListener('click', refresh);
-
-
-
-
-// function Logout(){
-//     window.alert('Logout success');
-//     localStorage.removeItem('token');
-//     setTimeout(() => {
-//        window.location.href = 'login.html'
-//     }, 2000)
-   
  
-    
-// }
 
-// logout.addEventListener('click', () => {
-//     Logout()
-// });
 
 
-// function ExpiredRefresh(){
-//     setTimeout(() =>{
-//      videocontainer[0].removeEventListener('click', refresh);
-//      window.alert('refresh timed out')
-//     }, 100000)
-// }
-
-// ExpiredRefresh()
-
-
-     
-// setInterval(() => {
-//     localStorage.removeItem('token');
-// }, 50000);
-
-
-
-
-
-
-
-
-
-
-
-
-// doggybutton.disabled = true;
-// doggybutton.style.backgroundColor = 'grey';
-
-
-
-// startbutton.addEventListener('click', () => {
-//      video1.play();
-
-//    start = setInterval(() => {
-//     video1.currentTime = 0;
-//  }, 4000)
-
-//   startbutton.disabled = true;
-//   startbutton.style.backgroundColor = 'grey'
-//   doggybutton.disabled = false;
-//   doggybutton.style.backgroundColor = 'purple';
- 
-// });
-
-
-// doggybutton.addEventListener('click', () => {
-//     doggybutton.disabled = true;
-//     doggybutton.style.backgroundColor = 'grey';
-
-//     setTimeout(() => {
-//     doggybutton.disabled = false;
-//     doggybutton.style.backgroundColor = 'purple';
-
-// }, 25000);
-
-//       clearInterval(start);
-
-//    initiate =  setInterval(() => {
-//         video1.play(); 
-//     video1.currentTime = 0;
-    
-// }, 7300);
-
-
-
-//   setTimeout(() => {
-//     clearInterval(initiate);
-
-//    start = setInterval(() => {
-//      video1.play();
-//      video1.currentTime = 0;
-    
-// }, 5000)
-     
-//     //  doggybutton.disabled = false;
-//     //  doggybutton.style.backgroundColor = 'purple';
-     
-// }, 13000)
-
-    
-// });
-
-
-//     nackbutton.addEventListener('click', () => {
-//     videoSource1.src = "http://localhost:4000/game/Test2.mp4";
-//     video.load();
-
-//     video.addEventListener('canplay', () => {
-//         video.play()
-//     })
-    
-//     setTimeout(() => {
-//         video.pause()
-//         videoSource1.src = "http://localhost:4000/game/Test1.mp4"
-//         video.load();
-//         video.preload = 'auto';
-//         video.autoplay = true;
-//         video.currentTime = 0;
-//         video.play();
-
-//         video.addEventListener('canplaythrough', () => {
-//         video.play()
-//     })
-    
-//     }, 3000);
-
-    
-
-
-// });
-
-
-    // video2.style.display = 'none'
-
-//     setTimeout(() => {
-//         video.pause()
-//         video.currentTime = 0;
-//         videoSource1.src = "http://localhost:4000/game/Test1.mp4";
-//         video.load()
-//         video.play();
-//     }, 6000)
-
-
-// setTimeout(() => {
-//         video.pause()
-//         video.currentTime = 0;
-//         videoSource1.src = "http://localhost:4000/game/Static1.mp4";
-//         video.load()
-//         video.play();
-//     }, 10000)
-
-
-
-
-//    videoSource1.src = "";
-//     video1.load()
-//     videoSource1.src = "http://localhost:4000/game/Test2.mp4";
-//     video1.load();
-//     video1.play();
-    
-    
-
-//     setTimeout(() => {
-//         videoSource2.src = "";
-//         video2.load()
-//         videoSource2.src = "http://localhost:4000/game/Test1.mp4";
-//         video2.load();
-//         video2.play();
-        
-        
-//     }, 5000)
-
-
-
-//     videoSource1.src = "http://localhost:4000/game/Test2.mp4";
-//     video.load()
-//     video.play();
-
-//     video.onended = () => {
-//        videoSource1.src = "http://localhost:4000/game/Test1.mp4";
-//        video.load()
-//        video.play()
-// }
-
-
-// video.onended = () => {
-//     videoSource1.src = "http://localhost:4000/game/Test2.mp4";
-//     video.load()
-//     video.play();
-// }
-    // setInterval(() => {
-
-    //  video.currentTime = 0;
-
-    // }, 2000);
-
-//    doggybutton.disabled = true;
-    //    video.currentTime = 0;
-     
-    
-
-    //  setTimeout(() => {
-    //    videoSource1.src = "http://localhost:4000/game/Test2.mp4";
-    //    video.load();
-    // //    video.play()
-       
-    //    video.currentTime = 0;
-    //  }, 10000)
-
-
-    //  setTimeout(() => {
-    //    videoSource1.src = "http://localhost:4000/game/Static1.mp4";
-    //    video.load();
-    // //    video.play()
-    //    doggybutton.disabled = false;
-    //    video.currentTime = 0;
-    //  }, 12000)
-
-
-
-
-// Authentication logic on frontend alone.
-
-// if(!accesstoken || !refreshtoken){
-//     window.alert('Unauthorized user');
-//     window.location.href = '/login'
-// }
-
-
-// async function refresh(){
-//     try{
-    
-//     localStorage.setItem('accesstoken',  accesstoken)
-//     localStorage.setItem('refreshtoken',  refreshtoken);
-   
-//     } catch(error){
-//         console.error(error)
-//     }
-// }
-
-// videocontainer[0].addEventListener('click', refresh);
-
-
-// videos[0].addEventListener('click', () => {
-//     if(videos[0].muted){
-//         videos[0].muted = false
-//     }
-// })
-
-
-
-// function Logout(){
-    
-//      localStorage.removeItem('accesstoken');
-//      localStorage.removeItem('refreshtoken');
-//      window.location.href = '/login'
- 
-    
-// }
-
-// logout.addEventListener('click', () => {
-//     Logout()
-// });
-
-
-// function ExpiredRefresh(){
-//     setTimeout(() =>{
-//      videocontainer[0].removeEventListener('click', refresh);
-//      window.alert('session timed out')
-//     }, 40000)
-// }
-
-// ExpiredRefresh()
-
-
-     
-// setInterval(() => {
-//     localStorage.removeItem('accesstoken');
-//     localStorage.removeItem('refreshtoken');
-// }, 30000);
