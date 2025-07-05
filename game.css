@@ -67,7 +67,7 @@ body{
 
 
 #game-container{
-    position: fixed;
+    position: absolute;
     left: 2em;
     display: flex;
     flex-direction: column;
@@ -181,13 +181,14 @@ body{
 @media screen and (min-width: 498px) and (max-height: 320px){
 
 #game-container{
+    top: 8em;
     left: auto;
     top: 0.1em;
     
 }
      
 .videos{
-    width: 280%;
+    width: 150%;
 }
 
 #startbutton{
@@ -225,13 +226,14 @@ body{
 @media screen and (min-width: 498px) and (max-height: 360px){
 
 #game-container{
+    top: 8em;
     left: auto;
     top: 0.1em;
     
 }
      
 .videos{
-    width: 280%;
+    width: 150%;
 }
 
 #startbutton{

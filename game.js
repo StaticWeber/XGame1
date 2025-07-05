@@ -73,10 +73,15 @@ style4Button.style.backgroundColor = 'grey';
 
 startbutton.addEventListener('click', () => {
      video1.play();
-     video2.pause();
-     video3.pause();
-     video4.pause();
-     video5.pause();
+     video2.play();
+     video3.play();
+     video4.play();
+     video5.play();
+     video1.muted = false;
+     video2.muted = true;
+     video3.muted = true;
+     video4.muted = true;
+     video5.muted = true;
  //  video1.muted = false;
  //  video2.muted = true;
   startbutton.disabled = true;
@@ -111,11 +116,11 @@ style1Button.addEventListener('click', () => {
     video3.style.display = 'none';
     video4.style.display = 'none';
     video5.style.display = 'none';
-    video5.pause();
-    video4.pause();
-    video3.pause();
-    video2.play();
-    video1.pause();
+    video5.muted = true;
+    video4.muted = true;
+    video3.muted = true;
+    video2.muted = false;
+    video1.muted = true;
 
  // video2.muted = false;
  // video1.muted = true;
@@ -150,11 +155,11 @@ style1Button.addEventListener('click', () => {
     video3.style.display = 'none';
     video2.style.display = 'none';
     video1.style.display = 'flex';
-    video1.play();
-    video2.pause();
-    video3.pause();
-    video4.pause();
-    video5.pause();
+    video1.muted = false;
+    video2.muted = true;
+    video3.muted = true
+    video4.muted = true;
+    video5.muted = true;
 
  // video1.muted = false;
  // video2.muted = true;
@@ -171,11 +176,11 @@ style2Button.addEventListener('click', () => {
     video3.style.display = 'flex'
     video4.style.display = 'none';
     video5.style.display = 'none';
-    video5.pause();
-    video4.pause();
-    video3.play();
-    video2.pause();
-    video1.pause();
+    video5.muted = false;
+    video4.muted = true;
+    video3.muted = false;
+    video2.muted = true;
+    video1.muted = true;
    
 
  // video2.muted = false;
@@ -212,11 +217,11 @@ style2Button.addEventListener('click', () => {
     video3.style.display = 'none';
     video2.style.display = 'none';
     video1.style.display = 'flex';
-    video1.play();
-    video2.pause();
-    video3.pause();
-    video4.pause();
-    video5.pause();
+    video1.muted = false;
+    video2.muted = true;
+    video3.muted = true;
+    video4.muted = true;
+    video5.muted = true;
 
  // video1.muted = false;
  // video2.muted = true;
@@ -234,11 +239,11 @@ style3Button.addEventListener('click', () => {
     video3.style.display = 'none'
     video4.style.display = 'flex';
     video5.style.display = 'none';
-    video5.pause();
-    video4.play();
-    video3.pause();
-    video2.pause();
-    video1.pause();
+    video5.muted = true;
+    video4.muted = false
+    video3.muted = true;
+    video2.muted = true;
+    video1.muted = true;
    
 
  // video2.muted = false;
@@ -275,11 +280,11 @@ style3Button.addEventListener('click', () => {
     video3.style.display = 'none';
     video2.style.display = 'none';
     video1.style.display = 'flex';
-    video1.play();
-    video2.pause();
-    video3.pause();
-    video4.pause();
-    video5.pause();
+    video1.muted = false;
+    video2.muted = true;
+    video3.muted = true;
+    video4.muted = true;
+    video5.muted = true;
 
  // video1.muted = false;
  // video2.muted = true;
@@ -298,12 +303,11 @@ style4Button.addEventListener('click', () => {
     video3.style.display = 'none'
     video4.style.display = 'none';
     video5.style.display = 'flex';
-    video5.play();
-    video4.pause();
-    video3.pause();
-    video2.pause();
-    video1.pause();
-   
+    video5.muted = false;
+    video4.muted = true;
+    video3.muted = true;
+    video2.muted = true;
+    video1.muted = true;
 
  // video2.muted = false;
  // video1.muted = true;
@@ -339,11 +343,11 @@ style4Button.addEventListener('click', () => {
     video3.style.display = 'none';
     video2.style.display = 'none';
     video1.style.display = 'flex';
-    video1.play();
-    video2.pause();
-    video3.pause();
-    video4.pause();
-    video5.pause();
+    video1.muted = false;
+    video2.muted = true;
+    video3.muted = true;
+    video4.muted = true;
+    video5.muted = true;
 
  // video1.muted = false;
  // video2.muted = true;
